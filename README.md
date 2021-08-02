@@ -1,5 +1,4 @@
-### click here to see [Demo](https:/firegram-js.web.app/) 
- section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### click here to see [Demo](https://www.firegram-js.web.app/) 
 
 
 # Getting Started with Create React App
