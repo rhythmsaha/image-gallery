@@ -22,7 +22,6 @@ const Modal = ({ image, setImage }) => {
                 alt="fullscreenPic"
                 initial={{ y: "-100vh" }}
                 animate={{ y: 0 }}
-                transition={{ delay: 3 }}
             />
         </motion.div>
     );
