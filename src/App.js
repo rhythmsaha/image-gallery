@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import ImageGrid from "./components/ImageGrid";
+import Modal from "./components/Modal";
+import Title from "./components/Title";
+import UploadForm from "./components/UploadForm";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [image, setImage] = useState(null);
+
+    return (
+        <div className="App">
+            <Title />
+            <UploadForm />
+            <ImageGrid setImage={setImage} />
+            <AnimatePresence>
+                {image && <Modal image={image} setImage={setImage} />}
+            </AnimatePresence>
+        </div>
+    );
 }
 
 export default App;
